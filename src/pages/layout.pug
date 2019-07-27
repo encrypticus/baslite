@@ -1,0 +1,25 @@
+-
+  var description = "",
+      keywords = "";
+
+doctype html
+html.nojs
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    block description
+      meta(name="description" content=description)
+
+    block keywords
+      meta(name="keywords", content=keywords)
+
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+
+    block style
+      link(rel="stylesheet", href="styles.css")
+
+    block title
+      title
+
+  block content
