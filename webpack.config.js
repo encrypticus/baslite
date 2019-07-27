@@ -31,11 +31,6 @@ module.exports = (env, args) => {
   const config = merge({
         entry: {
           'index': './src/js/index.js',
-          'uikit': './src/js/uikit.js',
-          'reviews': './src/js/reviews.js',
-          'news': './src/js/news.js',
-          'registration': './src/js/registration.js',
-          'about': './src/js/about.js'
         },
 
         output: { // точка выхода
@@ -64,12 +59,7 @@ module.exports = (env, args) => {
       pug(isDev),
       sass(isDev),
       copyWebpackPlugin([{from: 'src/favicons', to: 'favicons'}]),
-      htmlWebpackPlugin({filename: 'uikit.html', template: 'src/pages/uikit.pug', inject: false}),
       htmlWebpackPlugin({filename: 'index.html', template: 'src/pages/index.pug', inject: false}),
-      htmlWebpackPlugin({filename: 'reviews.html', template: 'src/pages/reviews.pug', inject: false}),
-      htmlWebpackPlugin({filename: 'news.html', template: 'src/pages/news.pug', inject: false}),
-      htmlWebpackPlugin({filename: 'registration.html', template: 'src/pages/registration.pug', inject: false}),
-      htmlWebpackPlugin({filename: 'about.html', template: 'src/pages/about.pug', inject: false}),
       styleLintPlugin(),
       env.browserSync === 'open' ? browserSync() : {},
       jquery()
