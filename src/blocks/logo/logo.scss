@@ -1,0 +1,13 @@
+.logo {
+  font-size: pxToRem(50);
+  font-family: Lato, Arial, sans-serif;
+  line-height: pxToRem(20);
+  color: #000;
+  font-weight: 900;
+  text-decoration: none;
+
+  &__sub {
+    font-weight: 400;
+    color: #2aacc8
+  }
+}
