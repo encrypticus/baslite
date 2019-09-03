@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path');
 const merge = require('webpack-merge'); // объединяет массивы и объекты конфигураций из нескольких файлов-модулей
 const pug = require('./webpack/loaders/pug'); // модуль обработки pug-файлов

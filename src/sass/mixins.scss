@@ -7,8 +7,8 @@
 
     @if ($src) {
       src: url($src + '.woff') format('woff'),
-      url($src + '.ttf') format('truetype'),
-      url($src + '.svg') format('svg');
+        url($src + '.ttf') format('truetype'),
+        url($src + '.svg') format('svg');
     }
   }
 }
