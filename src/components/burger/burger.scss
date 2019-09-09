@@ -1,0 +1,71 @@
+.burger {
+  display: none;
+  width: 30px;
+  padding: 0;
+  line-height: 30px;
+
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+
+  order: 0;
+  margin-left: auto;
+
+  @media (max-width: 720px) {
+    display: inline-block;
+    margin-right: 5%;
+  }
+
+  > span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+
+    font-size: 0;
+    vertical-align: middle;
+    background-color: $black;
+    transition: background .3s;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+
+      height: 100%;
+      background-color: $black;
+      transition: top .3s .3s, transform .3s;
+    }
+
+    &:before {
+      top: -10px;
+    }
+
+    &:after {
+      top: 10px;
+    }
+  }
+
+  &_close {
+
+    > span {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        top: 0;
+        transition: transform .3s .3s, top .3s;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

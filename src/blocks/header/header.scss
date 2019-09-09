@@ -7,9 +7,18 @@
     border: 1px solid rgba(0, 0, 0, .15);
     background-color: $gray--lighten;
     box-sizing: border-box;
+
+    @media (max-width: 720px) {
+      flex-wrap: wrap;
+      padding: {
+        top: pxToRem(20);
+        bottom: pxToRem(20);
+      }
+    }
+
     padding: {
       top: pxToRem(50);
-      bottom: pxToRem(43);
+      bottom: pxToRem(41);
     }
   }
 
@@ -37,6 +46,11 @@
     @include for-laptop-down() {
       width: 80%;
       margin-left: 1%;
+    }
+
+    @media (max-width: 720px) {
+      width: 100%;
+      margin-left: 0;
     }
   }
 }

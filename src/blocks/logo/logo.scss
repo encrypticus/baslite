@@ -6,6 +6,10 @@
   font-weight: 900;
   text-decoration: none;
 
+  @media (max-width: 720px) {
+    line-height: normal;
+  }
+
   &__sub {
     font-weight: 400;
     color: #2aacc8
