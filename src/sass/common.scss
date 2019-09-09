@@ -1,5 +1,13 @@
 @import 'fonts';
 
+html {
+  font-size: 16px;
+
+  @include for-tablet-landscape-down() {
+    font-size: 14px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

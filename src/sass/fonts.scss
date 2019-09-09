@@ -1,13 +1,25 @@
 @font-face {
-  font-family: Arial;
+  font-family: 'Arial Bold MT';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/ArialRegular.eot'); /* IE9 Compat Modes */
-  src: local(Arial),
-    url('../fonts/ArialRegular.eot?#iefix') format('embeded-opentype'), /* IE6-IE8 */
-    url('../fonts/ArialRegular.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/ArialRegular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/ArialRegular.svg#Lato') format('svg');
+  src: url('../fonts/Arial Bold MT.eot'); /* IE9 Compat Modes */
+  src: local('Arial Bold MT'), local('Arial-Bold-MT'),
+    url('../fonts/Arial Bold MT.eot?#iefix') format('embeded-opentype'), /* IE6-IE8 */
+    url('../fonts/Arial Bold MT.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Arial Bold MT.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Arial Bold MT.svg#Arial Bold MT') format('svg');
+}
+
+@font-face {
+  font-family: 'Arial MT';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Arial MT.eot'); /* IE9 Compat Modes */
+  src: local('Arial MT'), local('Arial-MT'),
+    url('../fonts/Arial MT.eot?#iefix') format('embeded-opentype'), /* IE6-IE8 */
+    url('../fonts/Arial MT.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Arial MT.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Arial MT.svg#Arial MT') format('svg');
 }
 
 /* lato-regular - latin */
