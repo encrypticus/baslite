@@ -1,6 +1,6 @@
 .page-header {
 
-  .page-header__top {
+  &__top {
     display: flex;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .07);
@@ -22,7 +22,7 @@
     }
   }
 
-  .page-header__logo {
+  &__logo {
     margin-left: pxToPercent(196, $desktop-width);
 
     @include for-laptop-down() {
@@ -34,7 +34,7 @@
     }
   }
 
-  .page-header__nav {
+  &__nav {
     width: pxToPercent(659, $desktop-width);
     margin-left: pxToPercent(200, $desktop-width);
 
