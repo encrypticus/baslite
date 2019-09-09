@@ -8,7 +8,7 @@
     background-color: $gray--lighten;
     box-sizing: border-box;
 
-    @media (max-width: 720px) {
+    @include for-tablet-landscape-down() {
       flex-wrap: wrap;
       padding: {
         top: pxToRem(20);
@@ -48,7 +48,7 @@
       margin-left: 1%;
     }
 
-    @media (max-width: 720px) {
+    @include for-tablet-landscape-down() {
       width: 100%;
       margin-left: 0;
     }

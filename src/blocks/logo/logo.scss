@@ -6,7 +6,7 @@
   font-weight: 900;
   text-decoration: none;
 
-  @media (max-width: 720px) {
+  @include for-tablet-landscape-down() {
     line-height: normal;
   }
 
