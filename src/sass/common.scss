@@ -3,9 +3,9 @@
 html {
   font-size: 16px;
 
-  //@include for-tablet-landscape-down() {
-  //  font-size: 14px;
-  //}
+  @include for-phone-only() {
+    font-size: 14px;
+  }
 }
 
 body {

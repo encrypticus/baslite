@@ -11,7 +11,7 @@
   order: 0;
   margin-left: auto;
 
-  @media (max-width: 720px) {
+  @include for-tablet-landscape-down() {
     display: inline-block;
     margin-right: 5%;
   }
