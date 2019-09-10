@@ -6,11 +6,65 @@
   }
 
   &__slogan {
-    /* Style for "header bg" */
     width: pxToPercent(1000, $desktop-width);
-    height: 440px;
     margin: auto;
     box-shadow: inset 0 0 100px rgba(0, 0, 0, .12);
     background-color: $banner-slogan-bg;
+    background-image: url('../blocks/banner/img/paper-coffee-cup.png'), url('../blocks/banner/img/post.png');
+    background-repeat: no-repeat no-repeat;
+    background-position: 53.1% 3px, right top;
+    background-size: 21%, 45%;
+    box-sizing: border-box;
+
+    @include for-laptop-down() {
+      width: 90%;
+      background-size: 19%, 41%;
+    }
+
+    @include for-tablet-landscape-down() {
+      background-size: 17%, 34%;
+      padding: {
+        top: pxToPercent(45, $desktop-width);
+        bottom: pxToPercent(54, $desktop-width);
+      }
+    }
+
+    @media (max-width: 650px) {
+      padding-bottom: 5.71429%;
+    }
+
+    @include for-phone-only() {
+      padding: {
+        top: 6.21429%;
+        bottom: 8.71429%;
+      }
+    }
+    padding: {
+      top: pxToPercent(90, $desktop-width);
+      bottom: pxToPercent(109, $desktop-width);
+      left: pxToPercent(61, $desktop-width);
+    }
+  }
+
+  &__slogan-text {
+    width: 294px;
+    margin: 0;
+    font-size: pxToRem(50);
+    font-family: Lato, Arial, sans-serif;
+    color: $white;
+    font-weight: 700;
+
+    @include for-tablet-landscape-down() {
+      font-size: pxToRem(40);
+    }
+
+    @media (max-width: 650px) {
+      width: 209px;
+      font-size: pxToRem(30);
+    }
+
+    @include for-phone-only() {
+      font-size: 22px;
+    }
   }
 }
