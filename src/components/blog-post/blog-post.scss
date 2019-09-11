@@ -1,0 +1,81 @@
+.blog-post {
+  padding-bottom: pxToRem(21);
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: pxToRem(15);
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    @include for-phone-only() {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__title {
+    margin: pxToRem(-6) 0 0 pxToRem(19);
+    font-size: pxToRem(15);
+    font-family: 'Arial Bold MT', Arial, sans-serif;
+    color: $black;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+  }
+
+  &__text {
+    width: pxToRem(216);
+    margin: 0;
+    margin-bottom: pxToRem(20);
+    font-size: pxToRem(13);
+    font-family: 'Arial MT', Arial, sans-serif;
+    line-height: pxToRem(20);
+    color: $color-main;
+    font-weight: 400;
+
+    @include for-phone-only() {
+      width: 90%;
+      font-size: pxToRem(20);
+      line-height: pxToRem(27);
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: pxToRem(13);
+    font-size: pxToRem(13);
+    font-family: 'Arial MT', Arial, sans-serif;
+    font-weight: 400;
+    color: $color-active;
+    text-decoration: none;
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 7px;
+      background-image: url('../components/blog-post/img/arrow.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include for-phone-only() {
+        width: 7px;
+        height: 9px;
+      }
+    }
+  }
+}

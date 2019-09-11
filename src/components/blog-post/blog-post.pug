@@ -1,0 +1,11 @@
+mixin blog-post({ title = "Clean theme", imgUrl = "../components/blog-post/img/icon-pencil.svg", linkText = "Read More", linkUrl = "/", contentText = "" } = {})
+  .blog-post
+    .title-wrapper
+      img.blog-post__icon(src=imgUrl, alt="Blog post icon")
+      h3.blog-post__title= title
+    if (contentText !== "")
+      p.blog-post__text= contentText
+    else
+      p.blog-post__text
+        include ./assets/content.txt
+    a.blog-post__link(href=linkUrl)= linkText

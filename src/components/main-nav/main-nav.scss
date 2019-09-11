@@ -78,7 +78,14 @@
       width: pxToRem(7);
       height: pxToRem(5);
       background-image: url('../components/main-nav/img/down_arrow.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
       cursor: pointer;
+
+      @include for-phone-only() {
+        width: 9px;
+        height: 7px;
+      }
     }
 
     &_active > .main-nav__link {
