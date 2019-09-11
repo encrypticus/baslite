@@ -95,6 +95,10 @@
 
     &_level-2:not(:last-child) {
       border-bottom: 1px solid $gray--light;
+
+      @include for-tablet-landscape-down() {
+        border-color: $gray;
+      }
     }
   }
 
@@ -110,6 +114,15 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color .3s, color .3s;
+
+    @include for-tablet-landscape-down() {
+      font-size: pxToRem(16);
+    }
+
+    @include for-phone-only() {
+      font-size: pxToRem(23);
+      line-height: pxToRem(30);
+    }
 
     padding: {
       top: pxToRem(8);
@@ -140,6 +153,10 @@
 
       @include for-tablet-landscape-down() {
         justify-content: center;
+      }
+
+      @include for-phone-only() {
+        line-height: pxToRem(50);
       }
     }
   }
