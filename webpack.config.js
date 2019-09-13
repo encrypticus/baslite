@@ -13,6 +13,7 @@ const cleanWebpackPlugin = require('./webpack/plugins/cleanWebpackPlugin'); // �
 const styleLintPlugin = require('./webpack/plugins/styleLintPlugin'); // линтер стилевых файлов
 const browserSync = require('./webpack/plugins/browserSyncPlugin'); // в комментариях не нуждается
 const jquery = require('./webpack/plugins/jquery'); // плагин, добавляющий jquery в проект
+const hammer = require('./webpack/plugins/hammer'); // плагин, добавляющий hammerjs в проект
 const css = require('./webpack/loaders/css'); // модуль обработки css-файлов
 const image = require('./webpack/loaders/image'); // модуль обработки файлов изображений
 const video = require('./webpack/loaders/video'); // модуль обработки видеофайлов
@@ -63,7 +64,8 @@ module.exports = (env, args) => {
       htmlWebpackPlugin({filename: 'index.html', template: 'src/pages/index.pug', inject: false}),
       styleLintPlugin(),
       env.browserSync === 'open' ? browserSync() : {},
-      jquery()
+      jquery(),
+      hammer()
   );
 
   if (isDev) { // в режиме разработки
