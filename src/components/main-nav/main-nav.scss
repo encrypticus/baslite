@@ -21,6 +21,7 @@
 
     &_level-2 {
       position: absolute;
+      z-index: 100;
       display: none;
       width: pxToRem(197);
       border-bottom: 5px solid $color-active;
