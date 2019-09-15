@@ -2,7 +2,6 @@ const slider = document.querySelector('.latest-works__slider');
 const sliderInner = slider.querySelector('.latest-works__slider-inner');
 const buttonLeft = document.querySelector('.arrow-button');
 const buttonRight = document.querySelector('.arrow-button_direction_right');
-const { forEach } = Array.prototype;
 const touchEventDispathcer = new Hammer(slider);
 let percentForMarginLeft = 0;
 
