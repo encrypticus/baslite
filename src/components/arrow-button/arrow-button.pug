@@ -1,0 +1,10 @@
+mixin arrow-button(direction = "left")
+  -
+    var buttonClass = "arrow-button";
+    if (direction === "right") {
+    buttonClass += " arrow-button_direction_right"
+    }
+
+  button(class=buttonClass)
+    svg(width="7", height="10", viewBox="0 0 7 10")
+      path(fill="#434343", d="M5.134 10l1.863-1.82-3.26-3.187.004-.005-.002-.002 3.242-3.168-1.862-1.82L.01 4.994z")

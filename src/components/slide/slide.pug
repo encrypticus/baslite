@@ -1,0 +1,8 @@
+mixin slide(url = "../components/slide/img/slide1.png", preview = false)
+  .slide
+    img.slide__img(src=url, alt="slider image")
+    if (preview)
+      .slide__preview
+        .slide__preview-icons
+          img.slide__preview-img(src="../components/slide/img/preview.svg", alt="preview")
+          img.slide__link-img(src="../components/slide/img/link.svg", alt="link")

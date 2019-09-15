@@ -1,0 +1,39 @@
+.slide {
+  position: relative;
+  width: pxToPercent(220, 5000);
+  line-height: 0;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__preview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    height: pxToPercent(81, 160);
+    justify-content: center;
+    align-items: center;
+    background-color: $color-active;
+  }
+
+  &__preview-icons {
+    display: flex;
+    width: pxToPercent(90, 220);
+    justify-content: space-between;
+  }
+
+  &__preview-img {
+    width: pxToPercent(35, 90);
+    height: auto;
+  }
+
+  &__link-img {
+    width: pxToPercent(20, 90);
+    height: auto;
+  }
+}
