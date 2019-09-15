@@ -1,7 +1,7 @@
 .latest-works {
   width: pxToPercent(1000, $desktop-width);
   margin: auto;
-  padding-top: 19px;
+  padding-top: pxToRem(19);
 
   @media (max-width: 640px) {
     width: 90%;
@@ -15,9 +15,9 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     padding-left: pxToRem(39);
-    padding-top: 5px;
-    padding-bottom: 14px;
-    margin-bottom: 20px;
+    padding-top: pxToRem(5);
+    padding-bottom: pxToRem(14);
+    margin-bottom: pxToRem(20);
     border-bottom: 1px solid $gray;
   }
 
@@ -38,18 +38,18 @@
   &__buttons {
     display: flex;
     flex-wrap: nowrap;
-    margin-top: -5px;
+    margin-top: pxToRem(-5);
   }
 
   &__button {
-    margin-right: 11px;
+    margin-right: pxToRem(11);
   }
 
   &__slider {
     overflow: hidden;
-    padding-bottom: 40px;
+    padding-bottom: pxToRem(40);
     border-bottom: 1px solid $gray;
-    margin-bottom: 50px;
+    margin-bottom: pxToRem(50);
   }
 
   &__slider-inner {
