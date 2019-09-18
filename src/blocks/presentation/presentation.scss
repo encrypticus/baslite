@@ -1,0 +1,26 @@
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: pxToPercent(1000, $desktop-width);
+  box-sizing: border-box;
+  margin: auto;
+  border: 1px solid $header-bg;
+  background-color: $download-bg;
+  padding: {
+    top: pxToRem(29);
+    right: pxToRem(40);
+    bottom: pxToRem(30);
+    left: pxToRem(31);
+  }
+
+  &__text {
+    width: pxToPercent(607, 927);
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Arial MT', Arial, sans-serif;
+    line-height: pxToRem(26);
+    color: $color-main;
+    font-weight: 400;
+  }
+}
