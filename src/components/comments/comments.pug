@@ -1,0 +1,9 @@
+mixin comments({ title = "Testimonials", url = "../components/comments/img/comments.svg", contentText = "", author = "John Travis, CEO, DomainName.com" } = {})
+  .comments
+    +title("Testimonials", "comments")
+    if (contentText !== "")
+      p.comments__text= contentText
+    else
+      p.comments__text
+        include ./assets/content.txt
+    p.comments__author= author

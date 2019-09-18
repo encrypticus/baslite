@@ -82,7 +82,7 @@
 }
 
 @mixin for-phone-landscape-down() {
-  @media (max-width: 640px) and (orientation: landscape) {
+  @media (max-width: 640px) {
     @content;
   }
 }

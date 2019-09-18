@@ -1,0 +1,12 @@
+.advert {
+  display: flex;
+  justify-content: space-between;
+  width: pxToPercent(1000, $desktop-width);
+  margin: auto;
+  margin-bottom: pxToRem(41);
+
+  @include for-phone-landscape-down() {
+    width: 90%;
+    flex-direction: column;
+  }
+}

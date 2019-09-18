@@ -1,0 +1,74 @@
+.clients {
+  $link-width: 158;
+
+  //width: 34.28571428571429vw;
+  width: pxToPercent(480, 1000);
+  min-width: 276px;
+
+  @include for-phone-landscape-down() {
+    width: 90%;
+  }
+
+  &__brand-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 13px;
+    height: 14.42857142857143vw;
+    min-height: 110.8px;
+
+    @include for-phone-landscape-down() {
+      height: 30vw;
+    }
+
+    @include for-phone-only() {
+      height: 50vw;
+    }
+  }
+
+  &__brand {
+    width: pxToPercent(160, 480);
+    //width: 11.42857142857143vw;
+    height: 50%;
+    //height: 7.214285714285714vw;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 pxToRem(25) #e8ebf1;
+    border: 1px solid $gray--lighten;
+    background-color: $white;
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__img {
+    height: auto;
+
+    &_brand_cox {
+      width: pxToPercent(103, $link-width);
+    }
+
+    &_brand_cnn {
+      width: pxToPercent(97, $link-width);
+    }
+
+    &_brand_apartment {
+      width: pxToPercent(116, $link-width);
+    }
+
+    &_brand_john {
+      width: pxToPercent(110, $link-width);
+    }
+
+    &_brand_banana {
+      width: pxToPercent(81, $link-width);
+    }
+
+    &_brand_fuji {
+      width: pxToPercent(147, $link-width);
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.title {
+  position: relative;
+  margin: 0;
+  padding-left: 39px;
+  font-size: pxToRem(15);
+  font-family: 'Arial Bold MT', Arial, sans-serif;
+  line-height: pxToRem(20);
+  color: $black;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @include for-phone-only() {
+    font-size: 1.25rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+
+  &_cursor {
+
+    &::before {
+      width: 14px;
+      height: 24px;
+      background-image: url('../components/title/img/cursor.svg');
+    }
+  }
+
+  &_comments {
+
+    &::before {
+      width: 24px;
+      height: 23px;
+      background-image: url('../components/title/img/comments.svg');
+    }
+  }
+
+  &_clients {
+
+    &::before {
+      width: 24px;
+      height: 20px;
+      background-image: url('../components/title/img/clients.svg');
+    }
+  }
+
+  &_email {
+
+    &::before {
+      width: 24px;
+      height: 17px;
+      background-image: url('../components/title/img/email.svg');
+    }
+  }
+
+  &_brush {
+
+    &::before {
+      width: 29px;
+      height: 26px;
+      background-image: url('../components/title/img/paint_brush.svg');
+    }
+  }
+}

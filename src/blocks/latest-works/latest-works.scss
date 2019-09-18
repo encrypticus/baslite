@@ -1,6 +1,7 @@
 .latest-works {
   width: pxToPercent(1000, $desktop-width);
   margin: auto;
+  margin-bottom: pxToRem(25);
   padding-top: pxToRem(19);
 
   @media (max-width: 640px) {
@@ -49,7 +50,6 @@
     overflow: hidden;
     padding-bottom: pxToRem(40);
     border-bottom: 1px solid $gray;
-    margin-bottom: pxToRem(50);
   }
 
   &__slider-inner {

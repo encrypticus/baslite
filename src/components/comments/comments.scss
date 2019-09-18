@@ -1,0 +1,33 @@
+.comments {
+  width: pxToPercent(425, 1000);
+  font-size: pxToRem(14);
+  line-height: pxToRem(24);
+
+  @include for-phone-landscape-down() {
+    width: 100%;
+  }
+
+  @include for-phone-only() {
+    font-size: pxToRem(20);
+  }
+
+  &__text {
+    margin: pxToRem(11) 0 pxToRem(24) 0;
+    font-family: 'Arial MT', Arial, sans-serif;
+    color: $color-main;
+    font-weight: 400;
+  }
+
+  &__author {
+    margin: 0;
+    font-family: 'Arial Bold MT', Arial, sans-serif;
+    font-style: italic;
+    color: $color-main;
+    font-weight: 700;
+    text-align: left;
+
+    @include for-phone-landscape-down() {
+      margin-bottom: 2rem;
+    }
+  }
+}
