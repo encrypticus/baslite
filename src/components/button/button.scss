@@ -1,0 +1,37 @@
+.button {
+  position: relative;
+  display: inline-block;
+  font-size: pxToRem(18);
+  font-family: 'Arial Bold MT', Arial, sans-serif;
+  line-height: pxToRem(20);
+  color: $color-main--dark;
+  border: 1px solid $color-active;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .2), inset 0 2px 1px rgba(255, 255, 255, .1);
+  background-color: $color-active;
+  background-image: linear-gradient(to top, $color-active 0%, #60cede 15%, #72dae6 50%, #81e4ed 100%);
+
+  &_download {
+    padding: {
+      top: pxToRem(20);
+      right: pxToRem(20);
+      bottom: pxToRem(20);
+      left: pxToRem(71);
+    }
+  }
+
+  &_download &__icon {
+    position: absolute;
+    top: pxToRem(16);
+    left: pxToRem(19);
+    display: inline-block;
+    width: 28px;
+    height: 25px;
+    vertical-align: middle;
+    background-image: url('../components/button/img/download.svg');
+  }
+}

@@ -1,0 +1,24 @@
+mixin button(text, mods)
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' button_' + modsList[i].trim();
+      }
+    }
+
+  //- передан href — это ссылка
+  if (attributes.href)
+    a.button(class=allMods)&attributes(attributes)!= text
+      block
+
+  //- иначе, если передан isInput и он true, это input
+  else if (typeof(isInput) !== 'undefined' && isInput)
+    input.button(class=allMods, value=text, type='button')&attributes(attributes)
+
+  //- иначе это button
+  else
+    button.button(class=allMods)&attributes(attributes)!= text
+      block

@@ -1,5 +1,6 @@
 .presentation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: pxToPercent(1000, $desktop-width);
@@ -7,6 +8,10 @@
   margin: auto;
   border: 1px solid $header-bg;
   background-color: $download-bg;
+
+  @include for-phone-landscape-down() {
+    width: 90%;
+  }
   padding: {
     top: pxToRem(29);
     right: pxToRem(40);
@@ -22,5 +27,18 @@
     line-height: pxToRem(26);
     color: $color-main;
     font-weight: 400;
+
+    @media (max-width: 1080px) {
+      width: 50%;
+    }
+
+    @include for-tablet-landscape-down() {
+      width: 100%;
+      margin-bottom: pxToRem(20);
+    }
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
   }
 }
