@@ -6,6 +6,7 @@
   width: pxToPercent(1000, $desktop-width);
   box-sizing: border-box;
   margin: auto;
+  margin-bottom: pxToRem(40);
   border: 1px solid $header-bg;
   background-color: $download-bg;
 
