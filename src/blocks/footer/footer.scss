@@ -1,5 +1,164 @@
-.footer {
-  width: pxToPercent(1000, $desktop-width);
+.page-footer {
   border: 1px solid rgba(0, 0, 0, .15);
+  padding-top: pxToRem(25);
+  padding-bottom: pxToRem(50);
   background-color: $gray--lighten;
+
+  &__list {
+    padding: 0;
+    list-style: none;
+
+    &_level-1 {
+      display: flex;
+      justify-content: space-between;
+      width: pxToPercent(1000, $desktop-width);
+      margin: auto;
+      margin-bottom: pxToRem(35);
+
+      @include for-laptop-down() {
+        flex-wrap: wrap;
+      }
+
+
+      @include for-phone-landscape-down() {
+        width: 90%;
+      }
+    }
+
+    &_socials {
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 193px;
+    }
+  }
+
+  &__item {
+
+    &_level-1 {
+      @include for-laptop-down() {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-size: pxToRem(15);
+    font-family: 'Arial Bold MT', Arial, sans-serif;
+    line-height: pxToRem(20);
+    color: $black;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include for-phone-landscape-down() {
+      margin-bottom: 16px;
+    }
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+  }
+
+  &__text {
+    width: pxToRem(233);
+    margin: 0;
+    margin-top: pxToRem(18);
+    font-size: pxToRem(14);
+    font-family: 'Arial MT', Arial, sans-serif;
+    //line-height: pxToRem(20);
+    color: $color-main;
+    font-weight: 400;
+
+    @include for-tablet-landscape-down() {
+      width: 100%;
+    }
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+  }
+
+  &__link {
+    font-size: pxToRem(14);
+    font-family: 'Arial MT', Arial, sans-serif;
+    line-height: pxToRem(27);
+    color: $color-main;
+    font-weight: 400;
+    text-decoration: none;
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+  }
+
+  &__social-link {
+    display: block;
+  }
+
+  &__address {
+    width: 135px;
+
+    @include for-phone-only() {
+      width: auto;
+    }
+  }
+
+  &__address-text {
+    font-size: pxToRem(14);
+    font-family: 'Arial MT', Arial, sans-serif;
+    font-style: normal;
+    color: $color-main;
+    font-weight: 400;
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+
+    span {
+      display: block;
+      font-family: 'Arial Bold MT', Arial, sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  &__phone {
+
+    a {
+      display: block;
+      font-size: pxToRem(14);
+      font-family: 'Arial MT', Arial, sans-serif;
+      font-style: normal;
+      color: $color-main;
+      font-weight: 400;
+      text-decoration: none;
+
+      @include for-phone-only() {
+        font-size: pxToRem(20);
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: pxToPercent(1000, $desktop-width);
+    margin: auto;
+
+    @include for-phone-landscape-down() {
+      width: 90%;
+    }
+  }
+
+  &__copyright {
+    width: pxToPercent(640, 1000);
+    margin: 0;
+    font-size: pxToRem(13);
+    font-family: 'Arial MT', Arial, sans-serif;
+    line-height: pxToRem(18);
+    color: $color-main;
+    font-weight: 400;
+  }
 }
