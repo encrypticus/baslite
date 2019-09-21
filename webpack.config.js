@@ -31,53 +31,55 @@ module.exports = (env, args) => {
 
   // точки входа
   const config = merge({
-        entry: {
-          'index': './src/js/index.js',
-        },
-
-        output: { // точка выхода
-          filename: '[name].js', // имя выходного js-файла
-          path: path.resolve(__dirname, 'dist'), // директория, в которой будет лежать выходной файл
-        },
-
-        module: { // модули, обрабатывающие файлы с указанным расширением
-          rules: [
-
-            {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              loader: 'babel-loader'
-            },
-          ]
-        }
+      entry: {
+        index: './src/js/index.js',
+        portfolio: './src/js/portfolio.js'
       },
-      cleanWebpackPlugin(),
-      miniCssExtractPlugin(),
-      optimization(),
-      watch(),
-      font(),
-      image(),
-      video(),
-      pug(isDev),
-      sass(isDev),
-      copyWebpackPlugin([{from: 'src/favicons', to: 'favicons'}]),
-      htmlWebpackPlugin({filename: 'index.html', template: 'src/pages/index.pug', inject: false}),
-      styleLintPlugin(),
-      env.browserSync === 'open' ? browserSync() : {},
-      jquery(),
-      hammer()
+
+      output: { // точка выхода
+        filename: '[name].js', // имя выходного js-файла
+        path: path.resolve(__dirname, 'dist'), // директория, в которой будет лежать выходной файл
+      },
+
+      module: { // модули, обрабатывающие файлы с указанным расширением
+        rules: [
+
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader'
+          },
+        ]
+      }
+    },
+    cleanWebpackPlugin(),
+    miniCssExtractPlugin(),
+    optimization(),
+    watch(),
+    font(),
+    image(),
+    video(),
+    pug(isDev),
+    sass(isDev),
+    copyWebpackPlugin([{ from: 'src/favicons', to: 'favicons' }]),
+    htmlWebpackPlugin({ filename: 'index.html', template: 'src/pages/index.pug', inject: false }),
+    htmlWebpackPlugin({ filename: 'portfolio.html', template: 'src/pages/portfolio.pug', inject: false }),
+    styleLintPlugin(),
+    env.browserSync === 'open' ? browserSync() : {},
+    jquery(),
+    hammer()
   );
 
   if (isDev) { // в режиме разработки
     return merge(
-        config,
-        sourceMap()
+      config,
+      sourceMap()
     );
   }
 
   if (!isDev) { // в режиме продакшн
     return merge(
-        config
+      config
     );
   }
 };

@@ -1,0 +1,19 @@
+@import 'variables';
+
+@import 'mixins';
+
+@import 'functions';
+
+@import 'common';
+
+@import '../blocks/header/header';
+
+@import '../blocks/logo/logo';
+
+@import '../components/main-nav/main-nav';
+
+@import '../components/burger/burger';
+
+@import '../components/title/title';
+
+@import '../blocks/footer/footer';

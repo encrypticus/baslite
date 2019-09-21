@@ -1,0 +1,17 @@
+extends  ./layout
+include includes
+
+block style
+  link(rel="stylesheet", href="portfolio.css")
+  include ../blocks/favicons/favicons
+
+block title
+  title Portfolio
+
+block content
+  body
+    .wrapper
+      +page-header('4')
+      main.page-conent
+
+    script(src="portfolio.js")

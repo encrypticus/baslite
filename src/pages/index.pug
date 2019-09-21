@@ -10,7 +10,8 @@ block title
 block content
   body
     .wrapper
-      include ../blocks/header/header
+      +page-header()
+        include ../blocks/banner/banner
       main.page-conent
         include ../blocks/blog/blog
         include ../blocks/latest-works/latest-works
