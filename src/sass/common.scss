@@ -18,4 +18,9 @@ body {
   max-width: 1400px;
   min-width: 480px;
   margin: auto;
+
+  &__inner {
+    width: pxToPercent(1000, $desktop-width);
+    margin: auto;
+  }
 }

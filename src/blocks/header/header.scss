@@ -1,5 +1,9 @@
 .page-header {
 
+  &-wrapper {
+    margin-bottom: 45px;
+  }
+
   &__top {
     display: flex;
     align-items: center;

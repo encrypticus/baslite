@@ -62,8 +62,17 @@ module.exports = (env, args) => {
     pug(isDev),
     sass(isDev),
     copyWebpackPlugin([{ from: 'src/favicons', to: 'favicons' }]),
-    htmlWebpackPlugin({ filename: 'index.html', template: 'src/pages/index.pug', inject: false }),
-    htmlWebpackPlugin({ filename: 'portfolio.html', template: 'src/pages/portfolio.pug', inject: false }),
+    htmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/pages/index.pug',
+      // chunks: ['vendors~index~portfolio', 'vendors~index','index'],
+      excludeChunks: ['portfolio']
+    }),
+    htmlWebpackPlugin({
+      filename: 'portfolio.html',
+      template: 'src/pages/portfolio.pug',
+      chunks: ['vendors~index~portfolio', 'portfolio']
+    }),
     styleLintPlugin(),
     env.browserSync === 'open' ? browserSync() : {},
     jquery(),
@@ -73,7 +82,7 @@ module.exports = (env, args) => {
   if (isDev) { // в режиме разработки
     return merge(
       config,
-      sourceMap()
+      // sourceMap()
     );
   }
 

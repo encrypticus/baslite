@@ -11,7 +11,8 @@ block title
 block content
   body
     .wrapper
-      +page-header('4')
+      .page-header-wrapper
+        +page-header('4')
       main.page-conent
-
-    script(src="portfolio.js")
+        .wrapper__inner
+          +title('Portfolio', 'brush')

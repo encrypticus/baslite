@@ -19,7 +19,10 @@ module.exports = function (jsOptions = {}, cssOptions = {}) {
         new terserWebpackPlugin(),
         // минификация css
         new OptimizeCSSAssetsPlugin({})
-      ]
+      ],
+      splitChunks: {
+        chunks: 'all'
+      }
     }
   }
 };
