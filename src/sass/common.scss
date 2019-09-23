@@ -22,5 +22,9 @@ body {
   &__inner {
     width: pxToPercent(1000, $desktop-width);
     margin: auto;
+
+    @include for-phone-landscape-down() {
+      width: 90%;
+    }
   }
 }

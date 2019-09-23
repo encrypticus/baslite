@@ -1,0 +1,19 @@
+mixin breadcrumbs(selectedID)
+  include breadcrumbs.data.pug
+
+  .breadcrumbs
+    ul.breadcrumbs__list
+      each item in breadcrumbs
+        +breadcrumbs-item(selectedID, item)
+
+mixin breadcrumbs-item(selectedID, item)
+  -
+    var thisItemClass = 'breadcrumbs__item';
+    var thisLinkClass = 'breadcrumbs__link';
+    if (selectedID === item.id) {
+      thisItemClass += ' breadcrumbs__item_active';
+    }
+
+  li(class= thisItemClass)
+    a(class= thisLinkClass, href=item.url)= item.name
+    block
