@@ -3,6 +3,10 @@
   width: pxToPercent(220, 5000);
   line-height: 0;
 
+  &_works {
+    width: 100%;
+  }
+
   &__img {
     width: 100%;
     height: auto;

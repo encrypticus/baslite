@@ -1,0 +1,11 @@
+.portfolio-works {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: pxToRem(42);
+
+  &-slide {
+    margin-bottom: pxToRem(36);
+    width: pxToPercent(220, 1000);
+  }
+}

@@ -1,5 +1,14 @@
-mixin slide(url = "../components/slide/img/slide1.png", preview = false)
-  .slide
+mixin slide({ url = "../components/slide/img/slide1.png", preview = false, mods } = {})
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' slide_' + modsList[i].trim();
+      }
+    }
+  .slide(class= allMods)
     img.slide__img(src=url, alt="slider image")
     if (preview)
       .slide__preview
