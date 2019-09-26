@@ -3,7 +3,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: pxToRem(42);
-  margin-bottom: 30px;
+  margin-bottom: pxToRem(45);
   border-bottom: 1px solid $gray;
 
   &-slide {

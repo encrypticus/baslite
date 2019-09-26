@@ -1,0 +1,27 @@
+mixin pagination(selectedID)
+  include pagination.data.pug
+
+  .pagination
+    ul.pagination__list
+      each item in pagination
+        +pagination-item(selectedID, item)
+
+mixin pagination-item(selectedID, item)
+  -
+    var thisItemClass = 'pagination__item';
+    var thisLinkClass = 'pagination__link';
+
+    if (selectedID === item.id) {
+      thisLinkClass += ' pagination__link_active';
+    }
+
+    if (typeof item.isButtonLast !== undefined && item.isButtonLast) {
+      thisLinkClass += ' pagination__link_button_last';
+    }
+
+    if (typeof item.isButtonNext !== undefined && item.isButtonNext) {
+      thisLinkClass += ' pagination__link_button_next';
+    }
+
+  li(class= thisItemClass)
+    a(class= thisLinkClass, href=item.url)= item.name

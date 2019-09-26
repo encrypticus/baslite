@@ -1,0 +1,54 @@
+.pagination {
+  width: 236px;
+  margin: 0 auto;
+
+  &-wrapper {
+    margin-bottom: 42px;
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 27px;
+    height: 27px;
+    font-size: pxToRem(14);
+    font-family: 'Arial MT', Arial, sans-serif;
+    color: $black;
+    font-weight: 400;
+    text-decoration: none;
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+
+    &_active {
+      background-color: $header-bg;
+    }
+
+    &_button_last {
+      background-color: $gray--lighten;
+      background-image: url('../components/pagination/img/db-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &_button_next {
+      background-color: $gray--lighten;
+      margin-left: 20px;
+      background-image: url('../components/pagination/img/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
