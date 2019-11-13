@@ -57,7 +57,7 @@
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"portfolio": 0
+/******/ 		"contacts": 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/js/portfolio.js","vendors~contacts~index~portfolio"]);
+/******/ 	deferredModules.push(["./src/js/contacts.js","vendors~contacts~index~portfolio"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -177,26 +177,26 @@ eval("/* WEBPACK VAR INJECTION */(function($) {const $links = $('.main-nav__item
 
 /***/ }),
 
-/***/ "./src/js/portfolio.js":
-/*!*****************************!*\
-  !*** ./src/js/portfolio.js ***!
-  \*****************************/
+/***/ "./src/js/contacts.js":
+/*!****************************!*\
+  !*** ./src/js/contacts.js ***!
+  \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_portfolio_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/portfolio.scss */ \"./src/sass/portfolio.scss\");\n/* harmony import */ var _sass_portfolio_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_portfolio_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_main_nav_main_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/main-nav/main-nav */ \"./src/components/main-nav/main-nav.js\");\n/* harmony import */ var _components_main_nav_main_nav__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_main_nav_main_nav__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_burger_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/burger/burger */ \"./src/components/burger/burger.js\");\n/* harmony import */ var _components_burger_burger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_burger_burger__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/js/portfolio.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_contacts_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/contacts.scss */ \"./src/sass/contacts.scss\");\n/* harmony import */ var _sass_contacts_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_contacts_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_main_nav_main_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/main-nav/main-nav */ \"./src/components/main-nav/main-nav.js\");\n/* harmony import */ var _components_main_nav_main_nav__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_main_nav_main_nav__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_burger_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/burger/burger */ \"./src/components/burger/burger.js\");\n/* harmony import */ var _components_burger_burger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_burger_burger__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/js/contacts.js?");
 
 /***/ }),
 
-/***/ "./src/sass/portfolio.scss":
-/*!*********************************!*\
-  !*** ./src/sass/portfolio.scss ***!
-  \*********************************/
+/***/ "./src/sass/contacts.scss":
+/*!********************************!*\
+  !*** ./src/sass/contacts.scss ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/portfolio.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/contacts.scss?");
 
 /***/ })
 
