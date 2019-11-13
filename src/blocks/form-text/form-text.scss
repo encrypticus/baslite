@@ -1,0 +1,22 @@
+.form-text {
+  font-size: pxToRem(14);
+  font-family: 'Arial MT', Arial, sans-serif;
+  margin-bottom: 30px;
+
+  &__description {
+    margin: 0;
+    margin-bottom: 21px;
+    line-height: 1;
+  }
+
+  &__email {
+    margin: 0;
+  }
+
+  a {
+    font-size: pxToRem(15);
+    font-family: 'Arial Bold MT', Arial, sans-serif;
+    color: $color-active;
+    text-decoration: none;
+  }
+}

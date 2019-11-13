@@ -1,0 +1,23 @@
+extends ./layout
+include includes
+
+append style
+  include ../blocks/favicons/favicons
+
+block title
+  title Contact us
+
+block content
+  body
+    .wrapper
+      .page-header-wrapper
+        +page-header('6')
+      main.page-content
+        .wrapper__inner
+          +title('Contact us', 'email')
+          include ../components/hr/hr
+          .contacts-content
+            .contacts-content__left
+              include ../blocks/form-text/form-text
+              include ../blocks/contact-form/contact-form
+            .contacts-content__right

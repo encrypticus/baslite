@@ -33,7 +33,8 @@ module.exports = (env, args) => {
   const config = merge({
       entry: {
         index: './src/js/index.js',
-        portfolio: './src/js/portfolio.js'
+        portfolio: './src/js/portfolio.js',
+        contacts: './src/js/contacts.js'
       },
 
       output: { // точка выхода
@@ -72,6 +73,11 @@ module.exports = (env, args) => {
       filename: 'portfolio.html',
       template: 'src/pages/portfolio.pug',
       chunks: ['vendors~index~portfolio', 'portfolio']
+    }),
+    htmlWebpackPlugin({
+      filename: 'contacts.html',
+      template: 'src/pages/contacts.pug',
+      excludeChunks: ['index', 'vendors~index', 'portfolio']
     }),
     styleLintPlugin(),
     env.browserSync === 'open' ? browserSync() : {},

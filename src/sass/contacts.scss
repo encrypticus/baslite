@@ -1,0 +1,29 @@
+@import 'variables';
+
+@import 'mixins';
+
+@import 'functions';
+
+@import 'common';
+
+@import '../blocks/header/header';
+
+@import '../blocks/logo/logo';
+
+@import '../components/main-nav/main-nav';
+
+@import '../components/burger/burger';
+
+@import '../components/hr/hr';
+
+@import '../blocks/form-text/form-text';
+
+@import '../components/text-field/text-field';
+
+.contacts-content {
+  margin-top: 40px;
+
+  &__left {
+    width: pxToPercent(565, 1000);
+  }
+}
