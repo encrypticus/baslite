@@ -21,6 +21,10 @@
     background-repeat: no-repeat;
   }
 
+  &_simple {
+    padding-left: 0;
+  }
+
   &_cursor {
 
     &::before {

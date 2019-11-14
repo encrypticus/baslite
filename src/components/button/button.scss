@@ -34,4 +34,24 @@
     vertical-align: middle;
     background-image: url('../components/button/img/download.svg');
   }
+
+  &_submit {
+    padding: {
+      top: 21px;
+      right: 32px;
+      bottom: 16px;
+      left: 56px;
+    }
+  }
+
+  &_submit &__icon {
+    position: absolute;
+    top: 18px;
+    left: 19px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background-image: url('../components/button/img/submit.svg');
+  }
 }

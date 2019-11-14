@@ -67,17 +67,17 @@ module.exports = (env, args) => {
       filename: 'index.html',
       template: 'src/pages/index.pug',
       // chunks: ['vendors~index~portfolio', 'vendors~index','index'],
-      excludeChunks: ['portfolio']
+      excludeChunks: ['portfolio', 'contacts']
     }),
     htmlWebpackPlugin({
       filename: 'portfolio.html',
       template: 'src/pages/portfolio.pug',
-      chunks: ['vendors~index~portfolio', 'portfolio']
+      excludeChunks: ['index', 'contacts', 'vendors~index']
     }),
     htmlWebpackPlugin({
       filename: 'contacts.html',
       template: 'src/pages/contacts.pug',
-      excludeChunks: ['index', 'vendors~index', 'portfolio']
+      excludeChunks: ['index', 'portfolio', 'vendors~index' ]
     }),
     styleLintPlugin(),
     env.browserSync === 'open' ? browserSync() : {},

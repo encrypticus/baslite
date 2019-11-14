@@ -1,4 +1,4 @@
-.text-field {
+.textarea {
 
   span {
     display: block;
@@ -7,12 +7,12 @@
     font-family: 'Arial MT', Arial, sans-serif;
   }
 
-  input {
+  textarea {
     width: pxToPercent(480, 565);
-    height: pxToRem(38);
-    box-sizing: border-box;
+    height: pxToRem(160);
     font-size: 1rem;
     font-family: 'Arial MT', Arial, sans-serif;
     border: 1px solid $gray--dark;
+    box-sizing: border-box;
   }
 }

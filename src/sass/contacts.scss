@@ -20,10 +20,23 @@
 
 @import '../components/text-field/text-field';
 
+@import '../components/title/title';
+
+@import '../components/textarea/textarea';
+
+@import '../components/button/button';
+
+@import '../blocks/address/address';
+
 .contacts-content {
   margin-top: 40px;
+  display: flex;
 
   &__left {
     width: pxToPercent(565, 1000);
+  }
+
+  &__right {
+    margin-left: pxToPercent(74, 1000);
   }
 }

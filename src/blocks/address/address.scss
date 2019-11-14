@@ -1,0 +1,42 @@
+.address {
+  width: 135px;
+
+  @include for-phone-only() {
+    width: auto;
+  }
+
+  &__text {
+    font-size: pxToRem(14);
+    font-family: 'Arial MT', Arial, sans-serif;
+    font-style: normal;
+    color: $color-main;
+    font-weight: 400;
+
+    @include for-phone-only() {
+      font-size: pxToRem(20);
+    }
+
+    span {
+      display: block;
+      font-family: 'Arial Bold MT', Arial, sans-serif;
+      font-weight: 700;
+    }
+  }
+
+  &__phone {
+
+    a {
+      display: block;
+      font-size: pxToRem(14);
+      font-family: 'Arial MT', Arial, sans-serif;
+      font-style: normal;
+      color: $color-main;
+      font-weight: 400;
+      text-decoration: none;
+
+      @include for-phone-only() {
+        font-size: pxToRem(20);
+      }
+    }
+  }
+}
