@@ -3,6 +3,10 @@
   font-family: 'Arial MT', Arial, sans-serif;
   margin-bottom: 27px;
 
+  @include for-phone-only() {
+    font-size: 1.25rem;
+  }
+
   &__description {
     margin: 0;
     margin-bottom: 21px;
@@ -18,5 +22,9 @@
     font-family: 'Arial Bold MT', Arial, sans-serif;
     color: $color-active;
     text-decoration: none;
+
+    @include for-phone-only() {
+      font-size: 1.25rem;
+    }
   }
 }

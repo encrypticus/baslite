@@ -1,0 +1,35 @@
+.location {
+  width: 341px;
+  height: 280px;
+  margin-bottom: 36px;
+  border: 1px solid $header-bg;
+  background-color: $download-bg;
+  box-sizing: border-box;
+
+  &__map {
+    width: 300px;
+    height: 200px;
+    border: 4px solid $white;
+    box-sizing: border-box;
+    background-image: url('../blocks/location/img/map.jpg');
+    margin: {
+      top: 23px;
+      right: auto;
+      left: auto;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-family: 'Arial Bold MT', Arial, sans-serif;
+
+    @include for-phone-only() {
+      font-size: 1.25rem;
+    }
+    margin: {
+      top: 20px;
+      bottom: 0;
+      left: 17px;
+    }
+  }
+}

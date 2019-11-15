@@ -21,5 +21,10 @@ block content
               include ../blocks/form-text/form-text
               include ../blocks/contact-form/contact-form
             .contacts-content__right
-              +title('Office addresses', 'simple')
+              include ../blocks/location/location
+              +title('Office address', 'simple')
               include ../blocks/address/address
+
+      .page-footer-wrapper
+        include ../blocks/footer/footer
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=2ac75161-4165-4271-8540-e821eb701ba3&lang=en_US", type="text/javascript")

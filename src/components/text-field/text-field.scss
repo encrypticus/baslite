@@ -5,6 +5,10 @@
     margin-bottom: 9px;
     font-size: 14px;
     font-family: 'Arial MT', Arial, sans-serif;
+
+    @include for-phone-only() {
+      font-size: 1.25rem;
+    }
   }
 
   input {
@@ -14,5 +18,9 @@
     font-size: 1rem;
     font-family: 'Arial MT', Arial, sans-serif;
     border: 1px solid $gray--dark;
+
+    @include for-phone-only() {
+      font-size: 1.25rem;
+    }
   }
 }
