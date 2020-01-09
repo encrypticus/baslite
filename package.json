@@ -1,5 +1,5 @@
 {
-  "name": "uikit",
+  "name": "bislite",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/encrypticus/baslite.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alexandr Timofeev aka encrypticus",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.5.0",
